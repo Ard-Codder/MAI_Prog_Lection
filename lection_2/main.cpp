@@ -1,3 +1,5 @@
+// bool compare(FooString str); Вариант 2 - true – если строки равны
+
 #include <iostream>
 #include <cstring>
 
