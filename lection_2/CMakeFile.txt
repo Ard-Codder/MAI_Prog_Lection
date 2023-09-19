@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
-project(FooStringTest)
+project(FooString)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(FooStringTest main.cpp)
+add_executable(FooString main.cpp)
