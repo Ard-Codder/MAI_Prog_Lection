@@ -1,0 +1,5 @@
+Какой операционной системой является Linux?
+- Windows
+- MacOS
++ Linux
+- iOS
