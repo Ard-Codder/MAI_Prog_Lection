@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.0)
+project(SmartPointerExample)
+
+# Установка стандарта языка C++
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Добавление исполняемого файла main.cpp
+add_executable(main main.cpp)
+
+# Указание имени библиотеки (без префикса и суффикса)
+set(LIB_NAME mylib)
+
+# Добавление библиотеки
+add_library(${LIB_NAME} SHARED mylib.cpp)
+
+# Генерация сборочной конфигурации
+configure_file(
+    "${PROJECT_SOURCE_DIR}/config.h.in"
+    "${PROJECT_BINARY_DIR}/config.h"
+)
+
+# Добавление директории с сгенерированным файлом config.h
+include_directories("${PROJECT_BINARY_DIR}")
+
+# Линковка программы с библиотекой
+target_link_libraries(main ${LIB_NAME})
